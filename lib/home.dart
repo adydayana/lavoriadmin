@@ -8,16 +8,39 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+        title: const Text("Lavori Admin"),
+      ),
+        drawer: Drawer(
+    child: ListView(
+      children: const <Widget>[
+        ListTile(
+          leading: Icon(Icons.emoji_objects),
+          title: Text('Evaluate Service'),
+        ),
+                ListTile(
+          leading: Icon(Icons.people_alt_rounded),
+          title: Text('Manage Vendor'),
+        ),
+                ListTile(
+          leading: Icon(Icons.people),
+          title: Text('Manage Customer'),
+        ),
+        ListTile(
+          leading: Icon(Icons.data_usage),
+          title: Text('Manage Service'),
+        ),
+        ListTile(
+          leading: Icon(Icons.payments),
+          title: Text('Payment Admin Vendor'),
+        ),
+      ],
+    ),
+  ),
       body: Center(
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                'Home Page',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-            ),
             const Spacer(),
             RaisedButton(
               onPressed: () {

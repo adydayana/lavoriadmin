@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:lavori/home.dart';
 import 'package:provider/provider.dart';
 import 'package:lavori/firebaseauthservices.dart';
-import 'home.dart';
 import 'login.dart';
 import 'models/user.dart';
 
-
 void main() => runApp(
-  
       /// Inject the [FirebaseAuthService]
       /// and provide a stream of [User]
       ///
@@ -27,7 +25,7 @@ void main() => runApp(
         child: LavoriAdmin(),
       ),
     );
-    
+
 class LavoriAdmin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,4 +47,3 @@ class LavoriAdmin extends StatelessWidget {
     );
   }
 }
-
